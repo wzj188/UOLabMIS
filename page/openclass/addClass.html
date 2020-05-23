@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加公开课信息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/public.css" media="all">
+
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-form layuimini-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label required">日期</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input id="joinDate" type="text" name="joinDate" placeholder="请选择日期" value="" class="layui-input" lay-verify="required" lay-reqtext="加入日期不能为空">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">技术专题</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input type="text" name="text" lay-verify="required" lay-reqtext="技术专题不能为空,字母和汉字组合,1-50 个字符" placeholder="请输入技术专题" value="" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">主讲人</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input type="text" name="text" lay-verify="required" lay-reqtext="主讲人不能为空,2-4个汉字" placeholder="请输入主讲人" value="" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">组织人</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input type="text" name="text"  placeholder="请输入组织人" value="" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">地点</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input type="text" name="text" placeholder="请输入地点" value="" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">群体说明</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input type="text" name="text" lay-verify="required" lay-reqtext="群体说明不能为空" placeholder="请输入群体对象" value="" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">方式</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <select lay-verify="required" >
+                <option value="1" selected>线下</option>
+                <option value="2">直播</option>
+                <option value="3">录播</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">创新学分值</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input type="text" name="text"  placeholder="请输入创新学分值" value="" class="layui-input" lay-verify="number" lay-reqtext="创新学分值为数值">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">参加人数</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <input type="text" name="text"  placeholder="请输入参加人数" value="" class="layui-input" lay-verify="required|number" lay-reqtext="参加人数不能为空,为数值型数据">
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">备注</label>
+        <div class="layui-input-block" style="width: 620px;">
+            <textarea name="remark" class="layui-textarea" placeholder="请输入备注信息"></textarea>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认保存</button>
+        </div>
+    </div>
+</div>
+<script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.$;
+
+        //监听提交
+        form.on('submit(saveBtn)', function (data) {
+            var index = layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            }, function () {
+
+                // 关闭弹出层
+                layer.close(index);
+
+                var iframeIndex = parent.layer.getFrameIndex(window.name);
+                parent.layer.close(iframeIndex);
+
+            });
+
+            return false;
+        });
+
+    });
+
+    // 年选择器 （入学年份）
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        var initYear;
+
+        laydate.render({
+            elem: '#year',
+            type: 'year',
+            /* ready和change函数是为了实现选择年份时不用点确定直接关闭  */
+            ready: function(date){ // 控件在打开时触发，回调返回一个参数：初始的日期时间对象
+                initYear = date.year;
+            },
+            change: function(value, date, endDate){ // 年月日时间被切换时都会触发。回调返回三个参数，分别代表：生成的值、日期时间对象、结束的日期时间对象
+                var selectYear = date.year;
+                var differ = selectYear-initYear;
+                if (differ != 15 && differ != -15) {
+                    if($(".layui-laydate").length){
+                        $("#year").val(value);
+                        $(".layui-laydate").remove();
+                    }
+                }
+                initYear = selectYear;
+            }
+        });
+
+
+    });
+
+    // 年月日选择器（加入时间）
+    layui.use('laydate',function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#joinDate',
+            trigger: 'click'
+        });
+    })
+
+
+
+
+    // 三级联动的JS代码
+
+    //配置插件目录
+    layui.config({
+        base: '../../js/lay-module/layarea/'
+        , version: '1.0'
+    });
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'layarea'], function () {
+        var layer = layui.layer
+            , form = layui.form
+            , layarea = layui.layarea;
+
+        layarea.render({
+            elem: '#area-picker',
+            change: function (res) {
+                //选择结果
+                console.log(res);
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
