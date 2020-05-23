@@ -1,0 +1,43 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 100,
+  "data": [
+    {
+      "id": 1001,
+      "deptno": 11,
+      "deptname": "计算机科学与技术学院",
+      "remark": "无"
+    },
+    {
+      "id": 1002,
+      "deptno": 12,
+      "deptname": "电子信息工程学院",
+      "remark": "无"
+    },
+    {
+      "id": 1003,
+      "deptno": 13,
+      "deptname": "机械电子工程学院",
+      "remark": "无"
+    },
+    {
+      "id": 1004,
+      "deptno": 14,
+      "deptname": "计算机科学与技术学院",
+      "remark": "无"
+    },
+    {
+      "id": 1005,
+      "deptno": 15,
+      "deptname": "计算机科学与技术学院",
+      "remark": "无"
+    },
+    {
+      "id": 1006,
+      "deptno": 16,
+      "deptname": "计算机科学与技术学院",
+      "remark": "无"
+    }
+  ]
+}

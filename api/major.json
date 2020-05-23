@@ -1,0 +1,27 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 10,
+  "data": [
+    {
+      "id": 1001,
+      "majorname": "计算机科学与技术",
+      "remark": "无"
+    },
+    {
+      "id": 1002,
+      "deptname": "软件工程",
+      "remark": "无"
+    },
+    {
+      "id": 1003,
+      "deptname": "网络工程",
+      "remark": "无"
+    },
+    {
+      "id": 1004,
+      "deptname": "通信工程",
+      "remark": "无"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": 10000,
+      "realname": "张三",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "启用"
+    },
+    {
+      "id": 10001,
+      "realname": "王五",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "软件工程",
+      "classname": "软工二班",
+      "grade": "大三",
+      "telephone": "13834523412",
+      "qq": "34234576",
+      "job": "班长",
+      "status":"启用"
+    },{
+      "id": 10002,
+      "realname": "李四",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10003,
+      "realname": "张三",
+      "deptname": "电子信息工程学院",
+      "majorname": "电子信息",
+      "classname": "电信一班",
+      "grade": "大二",
+      "telephone": "18045678767",
+      "qq": "23789878",
+      "job": "团支部书记",
+      "status":"启用"
+    },{
+      "id": 10004,
+      "realname": "张三",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "禁用"
+    },{
+      "id": 10005,
+      "realname": "张三",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10006,
+      "realname": "张三",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10007,
+      "realname": "张三",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10008,
+      "realname": "张三",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10009,
+      "realname": "张三",
+      "deptname": "计算机科学与技术学院",
+      "majorname": "计算机科学与技术",
+      "classname": "计科一班",
+      "grade": "大二",
+      "telephone": "13545678767",
+      "qq": "89789878",
+      "job": "团支部书记",
+      "status": "启用"
+    }
+  ]
+}
